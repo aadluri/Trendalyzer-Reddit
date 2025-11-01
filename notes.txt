@@ -1,0 +1,6 @@
+Just some notes for myself
+
+conda install praw scipy numpy pandas plotly matplotlib
+conda install sqlalchemy duckdb streamlit
+conda install spaCy torch transformers sentence-transformers umap-learn
+conda install pmaw  hdbscan python-dotenv requests

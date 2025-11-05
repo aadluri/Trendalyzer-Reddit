@@ -1,6 +1,32 @@
 Just some notes for myself
 
-conda install praw scipy numpy pandas plotly matplotlib
-conda install sqlalchemy duckdb streamlit
-conda install spaCy torch transformers sentence-transformers umap-learn
-conda install pmaw  hdbscan python-dotenv requests
+order in which to install in conda venv: 
+conda install pandas numpy seaborn matplotlib streamlit plotly
+conda install spacy pytorch transformers sentence-transformers umap-learn scikit-learn 
+conda install jupyterlab 
+conda install sqlalchemy duckdb  praw python-dotenv requests hdbscan 
+pip install pmaw
+
+FOR README:
+How to Run Locally
+## Clone project and cd in
+git clone (LINK TODO)
+cd trendalyzer-reddit
+
+## Create environment and install dependencies
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+##  Set up .env
+ Copy lines from tempplate_envfile
+ Fill in your Reddit API keys
+
+## Run scraper
+python -m src.scraping.reddit_scraper
+
+# Run sentiment analysis
+python -m src.nlp.sentiment_model
+
+# Launch dashboard
+streamlit run src/app/dashboard.py

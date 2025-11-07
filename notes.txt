@@ -7,6 +7,40 @@ conda install jupyterlab
 conda install sqlalchemy duckdb  praw python-dotenv requests hdbscan 
 pip install pmaw
 
+reddit_trend_analyzer/
+├── src/
+│   ├── __init__.py
+│   ├── config.py
+│   ├── reddit_scraper.py
+│   ├── text_sentiment.py
+│   ├── color_analysis.py
+│   ├── dashboard_app.py
+│   ├── trend_tracker.py
+│   └── main.py
+│
+├── utils/
+│   ├── __init__.py
+│   ├── db_utils.py
+│   ├── plotting_utils.py
+│   └── sentiment_labels.py
+│
+├── tests/
+│   ├── test_scraper.py
+│   ├── test_sentiment.py
+│   └── test_color_analysis.py
+│
+├── data/
+│   ├── raw/
+│   ├── processed/
+│   └── images/
+│
+├── .env
+├── .gitignore
+├── requirements.txt
+└── README.md
+
+
+
 FOR README:
 How to Run Locally
 ## Clone project and cd in

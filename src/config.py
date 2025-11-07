@@ -12,7 +12,7 @@ USER_AGENT = os.getenv("USER_AGENT", "reddit_trend_analyzer")
 DB_PATH = os.getenv("DB_PATH", "db/reddit_trends.db")
 
 # Subreddit list - can change, but these are home decor related
-SUBREDDITS = ["HomeDecorating", "InteriorDesign", "DesignMyRoom", "CozyPlaces", "interiordecorating"]
+SUBREDDITS = ["r/HomeDecorating", "r/InteriorDesign", "r/DesignMyRoom", "r/CozyPlaces", "r/interiordecorating"]
 
 # too many posts may lead to rate limiting, ideally would use 30-40
 POST_LIMIT = 10

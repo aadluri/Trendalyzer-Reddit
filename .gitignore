@@ -5,3 +5,4 @@ data/
 db/*.db
 notes.txt
 .DS_Store
+run_token.sh

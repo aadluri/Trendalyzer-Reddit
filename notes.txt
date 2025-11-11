@@ -7,6 +7,34 @@ conda install jupyterlab
 conda install sqlalchemy duckdb  praw python-dotenv requests hdbscan 
 pip install pmaw
 
+
+
+
+FOR README:
+How to Run Locally
+## Clone project and cd in
+git clone (LINK TODO)
+cd trendalyzer-reddit
+
+## Create environment and install dependencies
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+##  Set up .env
+ Copy lines from tempplate_envfile
+ Fill in your Reddit API keys
+
+## Run scraper
+python -m src.scraping.reddit_scraper
+
+# Run sentiment analysis
+python -m src.nlp.sentiment_model
+
+# Launch dashboard
+streamlit run src/app/dashboard.py
+
+
 reddit_trend_analyzer/
 ├── src/
 │   ├── __init__.py
@@ -40,27 +68,36 @@ reddit_trend_analyzer/
 └── README.md
 
 
-
-FOR README:
-How to Run Locally
-## Clone project and cd in
-git clone (LINK TODO)
-cd trendalyzer-reddit
-
-## Create environment and install dependencies
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-
-##  Set up .env
- Copy lines from tempplate_envfile
- Fill in your Reddit API keys
-
-## Run scraper
-python -m src.scraping.reddit_scraper
-
-# Run sentiment analysis
-python -m src.nlp.sentiment_model
-
-# Launch dashboard
-streamlit run src/app/dashboard.py
+reddit_trend_analyzer/
+├── src/
+│   ├── __init__.py
+│   ├── config.py
+│   ├── data_collection/
+│   │   ├── __init__.py
+│   │   ├── reddit_scraper.py
+│   │   └── image_downloader.py
+│   ├── data_processing/
+│   │   ├── __init__.py
+│   │   ├── text_analysis.py
+│   │   ├── color_analysis.py
+│   │   └── trend_tracker.py
+│   ├── dashboard/
+│   │   ├── __init__.py
+│   │   └── app.py
+│   ├── utils/
+│   │   ├── __init__.py
+│   │   ├── db_utils.py
+│   │   ├── plotting_utils.py
+│   │   └── sentiment_labels.py
+│   └── tests/
+│       ├── test_scraper.py
+│       ├── test_color_analysis.py
+│       └── test_text_analysis.py
+├── data/
+│   ├── raw/
+│   ├── processed/
+│   └── images/
+├── .env
+├── requirements.txt
+├── README.md
+└── main.py

@@ -1,6 +1,4 @@
-Copy the below lines and save in a .env file
-
 REDDIT_CLIENT_ID=some_api_id
 REDDIT_CLIENT_SECRET=your_secretkey
-USER_AGENT=trend_research_script
-DB_PATH=db/reddit_trends.db
+USER_AGENT=trend_research_script by u/your_reddit_username
+DB_PATH=data/reddit_trends.db

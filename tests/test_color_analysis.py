@@ -1,4 +1,4 @@
-from src.data_processing.color_analysis import extract_dominant_colors
+from src.color_analysis import extract_dominant_colors
 import os
 
 def test_color_extraction():
@@ -8,3 +8,5 @@ def test_color_extraction():
     colors = extract_dominant_colors(test_image)
     assert isinstance(colors, list)
     assert len(colors) > 0
+
+#run locally using pytest src/tests/test_color_analysis.py
